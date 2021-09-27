@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'prettier',
     'plugin:react/recommended',
     'airbnb',
   ],
@@ -18,7 +19,16 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'prettier',
   ],
   rules: {
+    'prettier/prettier': 0,
+    'quotes': 'off',
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx', 'tsx'],
+      },
+    ],
   },
 };
